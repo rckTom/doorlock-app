@@ -16,6 +16,20 @@ public class ApiResponse {
         }
     }
 
+    public enum DoorState {
+        @SerializedName("0") Open(0),
+        @SerializedName("1") Present(1),
+        @SerializedName("2") Closed(2);
+
+        DoorState(int value)
+        {
+        }
+    }
+
+    private @SerializedName("err") ApiErrorCode errorCode;
+    private @SerializedName("msg") String message;
+    public @SerializedName("status") DoorState status;
+
     public ApiErrorCode get_error_code()
     {
         return errorCode;
@@ -25,13 +39,4 @@ public class ApiResponse {
     {
         return message;
     }
-
-    public boolean is_open()
-    {
-        return open;
-    }
-
-    private @SerializedName("err") ApiErrorCode errorCode;
-    private @SerializedName("msg") String message;
-    private @SerializedName("open") boolean open;
 }
