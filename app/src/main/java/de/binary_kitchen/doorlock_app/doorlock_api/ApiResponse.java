@@ -26,17 +26,7 @@ public class ApiResponse {
         }
     }
 
-    private @SerializedName("err") ApiErrorCode errorCode;
-    private @SerializedName("msg") String message;
+    public @SerializedName("err") ApiErrorCode error_code;
+    public @SerializedName("msg") String message;
     public @SerializedName("status") DoorState status;
-
-    public ApiErrorCode get_error_code()
-    {
-        return errorCode;
-    }
-
-    public String get_message()
-    {
-        return message;
-    }
 }
