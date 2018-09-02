@@ -61,14 +61,14 @@
                     android:onClick="onLock"/>
                 <ImageButton
                     android:id="@+id/Present"
+                    android:src="@drawable/ic_present"
+                    android:scaleType="fitCenter"
+                    android:padding="8dp"
+                    android:layout_weight="1"
                     android:layout_width="0dp"
-                    android:layout_height="60dp"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
-                    android:layout_weight="1"
-                    android:padding="8dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ic_present" />
+                    android:layout_height="60dp"/>
                 <ImageButton
                     android:id="@+id/Unlock"
                     android:src="@drawable/ic_unlock"
